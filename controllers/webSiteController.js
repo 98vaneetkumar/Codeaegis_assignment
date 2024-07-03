@@ -27,7 +27,7 @@ module.exports={
             const result = {
                 name: name,
                 description: description?description:"",
-                logo: logo,
+                companyLogo: logo,
                 facebookUrl: facebookUrl,
                 linkedInUrl: linkedInUrl,
                 twitterUrl: twitterUrl?twitterUrl:"",
@@ -36,6 +36,7 @@ module.exports={
                 phoneNumber: phoneNumber,
                 email: email,
             };
+           
             Model.webSiteRecord.create(result)
             res.status(200).send({ message: "Data Stroed successfully!", data: result });
         } catch (error) {
